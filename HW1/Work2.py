@@ -1,17 +1,11 @@
-x = 2
-y = 3
-S = x + y
-P = x * y
-print("Загадали два числа, сумма и произведение которых равна: ", S, "и", P, ".", "Какие два числа были загаданы?")
-i = 0
-count_number = 10
-while i <= count_number:
-    first_number = int(input("Первое число: "))
-    second_number = int(input("Второе число: "))
-    if first_number == x and second_number == y:
-        print(S, P, "->", first_number, second_number)
+sum_of_numbers = int(input("Первое число: "))
+mult_of_numbers = int(input("Второе число: "))
+x = sum_of_numbers // 2
+y = sum_of_numbers - x
+for i in range(1, 1000):
+    if x * y == mult_of_numbers:
+        print(f"Задуманные числа: {x}, {y}")
         break
     else:
-        print("Не правильно, попробуй еще раз. Осталось попыток угадать: ", count_number)
-    count_number -= 1
-    i += 1
+        print("Не правильно. Попробуй еще раз")
+        break
